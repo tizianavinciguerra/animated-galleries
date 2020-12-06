@@ -1,0 +1,172 @@
+//Scss
+
+@import "variables";
+@import "mixins";
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600&family=Nanum+Gothic:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    background-color: $background!important;
+    font-family: 'Dosis', sans-serif!important;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.title {
+    padding-left: 0px!important;
+
+    h1 {
+        font-weight: bold;
+        color: $font;
+        padding-left: 0;
+
+        a {
+            color: $font;
+
+            &:hover {
+                color: $lightBlue;
+                text-decoration: none;
+            }
+        }
+    }
+
+    h2 {
+        font-size: 1.6em;
+        color: $sub;
+    }
+}
+
+.container {
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+
+.gallery {
+    padding: 5% 0%;
+    height: 95vh;
+    z-index: 5;
+
+    img {
+        width: 100%;
+    }
+}
+
+.images-shattered {
+    width: 40%;
+    border: 5px solid white;
+    position: inherit;
+    height: 20rem;
+
+    @include mediaQ(540px) {
+        height: 10rem;
+    }
+    
+    img {
+        height: -webkit-fill-available;
+    }
+}
+
+
+.first {
+    @extend .images-shattered;
+    transform: rotate(5deg);
+    top: -75%;
+    @include mediaQ(600px) {
+        margin-left: 3%;
+    }
+}
+
+.second {
+    @extend .images-shattered;
+    width: 35%;
+    top: -40%;
+    left: 20%;
+    transform: rotate(356deg);
+
+    @include mediaQ(540px) {
+        top: -25%; 
+        left: 20%;
+        }
+}
+
+.third {
+    @extend .images-shattered;
+    width: 35%;
+    top: -28%;
+    left: 30%;
+    transform: rotate(345deg);
+
+    @include mediaQ(540px) {
+        top: 20%; 
+        left: 10%;
+        }
+}
+
+.fourth {
+    @extend .images-shattered;
+    top: 10%;
+    left: 48%;
+    transform: rotate(30deg);
+
+    @include mediaQ(540px) {
+        top: 10%;    
+        }
+}
+
+.fifth {
+    @extend .images-shattered;
+    margin-top: 0%;
+    float: right;    
+    transform: rotate(345deg);
+    margin-right: 15px;
+
+    @include mediaQ(540px) {
+    margin-top: 110%;   
+    }
+}
+
+.noRotation {
+    transform: rotate(0deg);
+}
+
+.shadow-sm {
+    box-shadow: 0px 0px 7px #a7a7a7 !important;
+}
+
+.gallery-block-img {
+
+    height: max-content;
+
+    .col-12 {
+        padding: 0.3%;
+    }
+
+    .col-4 {
+        padding: 0.3%;
+    }
+}
+
+img {
+    width: 100%;
+    max-height: -webkit-fill-available;
+}
+
+.row-imgs{
+    margin: 15% -25px 10%!important;
+
+    .col {
+    height: 200px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    @include mediaQ(540px) {
+        height: 120px;
+    }
+}

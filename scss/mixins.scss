@@ -1,0 +1,8 @@
+
+//Media Query Mixin
+
+@mixin mediaQ($arg) {
+   @media only screen and (max-width: $arg){
+      @content;
+   }
+}
